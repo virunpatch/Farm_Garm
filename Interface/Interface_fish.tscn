@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/User-UI/Selection2.png" type="Texture" id=1]
+[ext_resource path="res://Font/theme/TinyUnicode.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Fish/Pa-Nii .png" type="Texture" id=3]
+[ext_resource path="res://Assets/Fish/Baby-Nill .png" type="Texture" id=4]
+[ext_resource path="res://Assets/Fish/pixelfish-red_bellied_piranha.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 2 )
+
+[node name="Fish_Popup" type="Node2D"]
+
+[node name="Selection2" type="Sprite" parent="."]
+position = Vector2( 37.0749, 42.4736 )
+scale = Vector2( 1.16126, 1.30785 )
+texture = ExtResource( 1 )
+
+[node name="selec" type="TextureButton" parent="."]
+margin_left = 6.0
+margin_top = 69.0
+margin_right = 31.0
+margin_bottom = 78.0
+
+[node name="Label" type="Label" parent="selec"]
+margin_left = 2.18634
+margin_top = -3.91156
+margin_right = 28.1863
+margin_bottom = 9.08844
+custom_fonts/font = SubResource( 1 )
+text = "SELEC"
+
+[node name="cancle" type="TextureButton" parent="."]
+margin_left = 41.5001
+margin_top = 68.5224
+margin_right = 68.5001
+margin_bottom = 77.5224
+
+[node name="Label2" type="Label" parent="cancle"]
+margin_left = 0.746323
+margin_top = -4.23654
+margin_right = 28.7463
+margin_bottom = 8.76346
+custom_fonts/font = SubResource( 2 )
+text = "CANCLE"
+
+[node name="Pa-Nii " type="Sprite" parent="."]
+position = Vector2( 14.5407, 33.8017 )
+scale = Vector2( 0.551627, 0.551627 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Pa-Nii "]
+margin_left = 34.6488
+margin_top = -15.0
+margin_right = 93.6488
+margin_bottom = 9.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.0470588, 0.168627, 0.176471, 1 )
+text = "Nill-Fish"
+
+[node name="Baby-Nill " type="Sprite" parent="."]
+position = Vector2( 14.2771, 54.5023 )
+texture = ExtResource( 4 )
+
+[node name="Label3" type="Label" parent="Baby-Nill "]
+margin_left = 14.0461
+margin_top = -9.22244
+margin_right = 54.0461
+margin_bottom = 4.77756
+custom_fonts/font = SubResource( 4 )
+text = "Small-Fish"
+
+[node name="pixelfish-red_bellied_piranha" type="Sprite" parent="."]
+position = Vector2( 14.0923, 12.0003 )
+scale = Vector2( 0.356983, 0.402046 )
+texture = ExtResource( 5 )
+
+[node name="Label2" type="Label" parent="pixelfish-red_bellied_piranha"]
+margin_left = 37.7363
+margin_top = -18.1964
+margin_right = 153.736
+margin_bottom = 13.8036
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.282353, 0.0392157, 0.0392157, 1 )
+text = "Red-Bellied"

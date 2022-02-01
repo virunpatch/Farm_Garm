@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Menu/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Menu/Display Seen/Titlemenu.PNG" type="Texture" id=2]
+[ext_resource path="res://Font/theme/TinyUnicode.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sound/click1.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Menu/Button/Button1.png" type="Texture" id=5]
+
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 45
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 3 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -0.0576782
+margin_right = 1024.94
+margin_bottom = 600.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 365.498
+margin_top = -221.86
+margin_right = 669.498
+margin_bottom = -73.86
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="Button" parent="VBoxContainer"]
+margin_right = 304.0
+margin_bottom = 42.0
+focus_neighbour_top = NodePath("../quit")
+custom_fonts/font = SubResource( 1 )
+text = "Start"
+
+[node name="option " type="Button" parent="VBoxContainer"]
+margin_top = 46.0
+margin_right = 304.0
+margin_bottom = 88.0
+custom_fonts/font = SubResource( 2 )
+text = "Option"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/option "]
+stream = ExtResource( 4 )
+volume_db = -5.0
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+margin_top = 92.0
+margin_right = 304.0
+margin_bottom = 134.0
+focus_neighbour_bottom = NodePath("../start")
+custom_fonts/font = SubResource( 3 )
+text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="TiTle_Game" type="Sprite" parent="."]
+position = Vector2( 525.63, 159.208 )
+scale = Vector2( 11.1327, 6.29926 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 377.864
+margin_top = 64.4539
+margin_right = 683.864
+margin_bottom = 150.454
+custom_fonts/font = SubResource( 4 )
+text = "Sustainable Economy
+Farm Game"
+align = 1
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/option " to="." method="_on_option__pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/i_can_feel_it_8_bit.ogg-296ee4b4b505c817f2c327602f6fe772.oggstr"
+
+[deps]
+
+source_file="res://Sound/i_can_feel_it_8_bit.ogg"
+dest_files=[ "res://.import/i_can_feel_it_8_bit.ogg-296ee4b4b505c817f2c327602f6fe772.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

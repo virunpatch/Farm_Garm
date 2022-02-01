@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://dialogues/DialoguePlayer.gd" type="Script" id=1]
+[ext_resource path="res://Menu/Button/Button1.png" type="Texture" id=2]
+[ext_resource path="res://Font/theme/TinyUnicode.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Font/theme/RD CHULAJARUEK.ttf" type="DynamicFontData" id=4]
+
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 4 )
+
+[node name="DialoguePlayer" type="CanvasLayer"]
+script = ExtResource( 1 )
+dialogue_file = "res://dialogues/NPC.json"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+margin_right = 606.0
+margin_bottom = 158.0
+texture = ExtResource( 2 )
+region_rect = Rect2( -0.12402, -0.627352, 31.8365, 17.6665 )
+patch_margin_left = 1
+patch_margin_top = 2
+patch_margin_right = 1
+patch_margin_bottom = 2
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 81.2637
+margin_top = 13.2195
+margin_right = 165.264
+margin_bottom = 57.2195
+custom_fonts/normal_font = SubResource( 1 )
+text = "Name"
+
+[node name="Massage" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 77.0
+margin_top = 67.0
+margin_right = 981.0
+margin_bottom = 170.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "Massage For Testing To Day!
+"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
